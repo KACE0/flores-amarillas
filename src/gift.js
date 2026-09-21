@@ -6,7 +6,7 @@
   const icons=['✺','❀','♧','❀','✺','♧','❀','✿'];
   let opened=false,selected=-1,sceneReady=false,sceneActive=false,model=null,raf=0;
   const found=new Set();
-  document.title=`${config.name?'Flores para '+config.name:'Un jardín solo para ti'} · florecer.`;
+  document.title=config.name?'Flores para '+config.name:'Un jardín solo para ti';
   $('welcomeName').textContent=config.name?`Para ${config.name}, con todo mi cariño.`:'Y lleva tu nombre.';
   $('envelopeTo').textContent=config.name?`Para ${config.name}`:'Para ti, con cariño';
   $('gardenFor').textContent=config.name?`ESTE JARDÍN ES PARA TI, ${config.name}`:'UN JARDÍN SOLO PARA TI';
