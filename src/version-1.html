@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5eb">
+  <meta name="description" content="Un pequeño regalo de flores amarillas, con palabras bonitas solo para ti.">
+  <title>Unas flores para ti · florecer</title>
+  <style>
+    :root{--paper:#f8f5eb;--ink:#343b2c;--muted:#7a7c6b;--green:#414e32;--yellow:#f4cb49;--line:#dedfce;--serif:Georgia,'Times New Roman',serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid #ae7518;outline-offset:6px}button{color:inherit}button:disabled{cursor:wait}::selection{background:#f7dd8b} [hidden]{display:none!important}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;z-index:10;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23817553' opacity='.22' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E")}
+    .page{max-width:1320px;margin:auto;padding:0 64px}header{height:106px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;gap:10px;align-items:center;font-family:var(--serif);font-size:29px;letter-spacing:-1px}.brand-flower{width:25px;height:25px}.top-right{display:flex;align-items:center;gap:29px}.tiny{font-size:10px;letter-spacing:2.2px;text-transform:uppercase}.top-note{color:var(--muted)}.edit-button{background:none;border:1px solid #d3d6c4;border-radius:30px;padding:11px 17px;font-size:12px;display:flex;gap:8px;align-items:center}.edit-button:hover{background:#eeeedd}.edit-button svg{width:14px;height:14px}
+    main{min-height:calc(100svh - 175px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;padding:40px 0 34px;position:relative}.copy{padding:15px 0 20px;position:relative;z-index:2}.eyebrow{display:flex;gap:10px;align-items:center;color:#737747;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin:0 0 26px}.eyebrow::before{content:"";width:22px;height:1px;background:#969b6d}.recipient{font-size:14px;margin:0 0 18px;color:#697059;overflow-wrap:anywhere}h1{font-family:var(--serif);font-size:clamp(49px,5.6vw,77px);font-weight:400;line-height:1.045;letter-spacing:-3.8px;margin:0 0 25px;max-width:560px}h1 em{font-weight:400;color:#888f4d}.intro{font-size:15px;line-height:1.85;max-width:345px;color:#7a7c6b;margin:0 0 32px}.primary{display:inline-flex;align-items:center;justify-content:center;gap:26px;padding:17px 24px;border:1px solid var(--green);background:var(--green);color:#fffdf4;border-radius:5px;font-size:13px;letter-spacing:.2px;transition:background .2s,transform .2s;min-height:50px}.primary:hover{background:#566443;transform:translateY(-2px)}.arrow{font-size:21px;line-height:16px}.under-button{font-family:var(--serif);font-style:italic;font-size:13px;color:#92917c;margin:16px 0 0 9px}.intro-flower{font-size:16px;color:#b89531;margin-right:4px}
+    .art{position:relative;align-self:center;min-width:0;width:100%;isolation:isolate}.halo{position:absolute;width:94%;aspect-ratio:1;border-radius:50%;top:7%;left:3%;background:radial-gradient(ellipse,#f5e9ac88, #f5eabe33 62%,transparent 72%);z-index:-1}.orbit{position:absolute;inset:11% 0 9%;border:1px solid #dbdac16e;border-radius:50%;transform:rotate(-16deg);z-index:-1}.art-caption{position:absolute;top:6%;right:0;color:#8b8e6e;display:flex;align-items:center;gap:10px;font-size:9px;letter-spacing:1.7px;text-transform:uppercase}.art-caption::before{content:"";width:28px;height:1px;background:#bfc2a1}.bouquet{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 18px 14px #8278380c)}.bouquet-group{transform-origin:280px 510px;animation:sway 7s ease-in-out infinite}.flower{cursor:pointer;outline:none}.flower .bloom{transition:filter .2s}.flower:hover .bloom,.flower:focus-visible .bloom{filter:drop-shadow(0 0 7px #fff9cf)}.flower:focus-visible .focus-ring{opacity:1}.focus-ring{fill:none;stroke:#657047;stroke-width:2;stroke-dasharray:3 5;opacity:0}.art-bottom{text-align:center;position:relative;margin-top:-9px}.handwritten{font-family:var(--serif);font-style:italic;font-size:18px;color:#8b8e6e;transform:rotate(-5deg);margin:0}.little-heart{color:#b99d50;font-family:var(--serif);font-size:25px;margin:11px 0 0}.flower-hint{font-size:11px;color:#737858;letter-spacing:.4px;line-height:1.7;margin:9px 0 0}.spark{position:absolute;color:#bcab59;font-size:22px;animation:twinkle 4s ease-in-out infinite;pointer-events:none}.spark.one{top:29%;left:1%}.spark.two{top:60%;right:1%;font-size:15px;animation-delay:1.3s}.spark.three{top:5%;left:34%;font-size:13px;animation-delay:2s}
+    footer{border-top:1px solid var(--line);min-height:69px;display:flex;align-items:center;justify-content:space-between;gap:15px;color:#868975;font-size:10px;letter-spacing:.6px}.footer-right{display:flex;gap:8px;align-items:center}.footer-dot{width:5px;height:5px;border-radius:50%;background:#cbb35c}.footer-date{letter-spacing:1.5px;text-transform:uppercase;font-size:9px}
+    .letter{animation:arrive .8s both}.letter .eyebrow{margin-bottom:20px}.letter h1{font-size:clamp(38px,4.5vw,61px);letter-spacing:-2.7px;margin-bottom:21px}.letter-paper{position:relative;background:#fffdf5;border:1px solid #e6e2cc;padding:26px 30px 25px;box-shadow:0 8px 25px #66612306;transform:rotate(-1deg);max-width:475px}.letter-paper::before{content:"";width:73px;height:21px;position:absolute;background:#e9dfb594;top:-10px;left:calc(50% - 36px);transform:rotate(4deg)}.dear{font:italic 21px var(--serif);margin:0 0 15px;overflow-wrap:anywhere}.message{font-family:var(--serif);font-size:17px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:#61664f}.signature{font:italic 20px var(--serif);margin:21px 0 0;color:#868b53;overflow-wrap:anywhere}.letter-actions{display:flex;gap:20px;align-items:center;margin-top:23px;flex-wrap:wrap}.text-button{border:0;border-bottom:1px solid #aeb39a;padding:6px 0;background:transparent;font-size:11px;color:#737b60}.collected{font-size:10px;color:#93957b}.opened main{align-items:center}.opened .art .halo{background:radial-gradient(ellipse,#f7e498a0,#f5eabe33 62%,transparent 72%)}
+    .note-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);width:min(420px,calc(100% - 32px));background:#fffdf4;box-shadow:0 8px 50px #30361e26;border:1px solid #e4dfc5;border-radius:9px;padding:23px 48px 23px 25px;z-index:15;animation:toast-in .35s both}.note-toast p{margin:0;font:italic 21px/1.45 var(--serif);color:#5f6943}.note-toast small{display:block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#a18d40;margin-bottom:10px}.close-note{position:absolute;right:12px;top:12px;border:0;background:transparent;font-size:22px;color:#8b8d76;width:30px;height:30px}
+    .petal{position:fixed;top:-30px;left:var(--x);width:var(--s);height:calc(var(--s)*1.7);border-radius:70% 15% 65% 25%;background:var(--c);pointer-events:none;z-index:12;animation:fall var(--t) var(--d) linear forwards}.petal-layer{pointer-events:none;position:fixed;inset:0;overflow:hidden;z-index:12}
+    dialog{border:1px solid #dedfc9;border-radius:12px;background:var(--paper);color:var(--ink);padding:0;width:min(540px,calc(100% - 30px));max-height:90svh;box-shadow:0 30px 120px #25301e33}dialog::backdrop{background:#303b295e;backdrop-filter:blur(6px)}.dialog-inner{padding:31px}.dialog-header{display:flex;align-items:center;justify-content:space-between;gap:15px}.dialog-header h2{font:normal 30px var(--serif);letter-spacing:-1px;margin:0}.close-dialog{border:0;background:transparent;width:32px;height:32px;font-size:25px}.dialog-description{font-size:12px;color:#7a8069;line-height:1.7;margin:10px 0 21px}.field{display:block;margin:16px 0;font-size:11px;color:#6e755d}.field span{display:block;margin-bottom:8px}.field input,.field textarea{width:100%;border:1px solid #d8dcc9;border-radius:5px;padding:11px 12px;color:#454d36;background:#fffef8;font-size:14px;line-height:1.6;outline:none}.field input:focus,.field textarea:focus{border-color:#909e65;box-shadow:0 0 0 3px #bcc79626}.field textarea{min-height:145px;resize:vertical}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.dialog-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}.dialog-actions .primary{gap:10px;flex:1;padding:12px 15px;font-size:12px}.secondary{background:transparent;border:1px solid #bec6a8;border-radius:5px;padding:12px 14px;font-size:12px}.secondary:hover{background:#eeeedd}.share-explanation{font-size:11px;line-height:1.7;color:#858b73;margin:17px 0 0}.form-status{font-size:12px;line-height:1.6;color:#586839;margin:12px 0 0;min-height:19px}.url-field{width:100%;padding:9px;margin-top:10px;border:1px solid #d2d7be;background:#fffdf6;border-radius:4px;font-size:11px}.noscript{padding:18px;text-align:center;background:#f7e49d;font-size:14px}
+    @keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(1deg)}}@keyframes twinkle{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:.85;transform:scale(1.1)}}@keyframes arrive{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes toast-in{from{opacity:0;transform:translate(-50%,15px)}to{opacity:1;transform:translate(-50%,0)}}@keyframes fall{0%{transform:translate3d(0,-20px,0) rotate(0);opacity:0}10%{opacity:.85}90%{opacity:.8}100%{transform:translate3d(var(--drift),110vh,0) rotate(680deg);opacity:0}}
+    body,.page{overflow-x:clip}.art:hover .bouquet-group,.art:focus-within .bouquet-group{animation-play-state:paused}
+    @media(min-width:1500px){main{min-height:730px}}
+    @media(max-width:1000px){.page{padding:0 35px}.top-note{display:none}main{gap:10px}h1{letter-spacing:-2.7px}.art-caption{font-size:8px}.letter-paper{padding:24px}.message{font-size:16px}}
+    @media(max-width:700px){.page{padding:0 25px}header{height:81px}.brand{font-size:26px}.edit-button{padding:9px 12px;font-size:11px}main{display:flex;flex-direction:column;gap:0;padding:36px 0 29px;min-height:0}.copy{width:100%;text-align:center;padding:0}.eyebrow{justify-content:center;font-size:8px;letter-spacing:1.7px;margin-bottom:20px}.recipient{font-size:12px;margin-bottom:15px}h1{font-size:56px;letter-spacing:-3px;max-width:400px;margin:0 auto 20px}.intro{font-size:13px;max-width:280px;margin:0 auto 23px;line-height:1.8}.primary{padding:14px 22px;min-height:48px}.under-button{font-size:12px;margin:13px 0 0}.art{max-width:430px;margin-top:18px}.art-caption{top:7%;right:4%;font-size:8px;letter-spacing:1.4px}.bouquet{margin-top:-8px}.art-bottom{margin-top:-25px}.handwritten{font-size:17px}.little-heart{margin:8px 0 0;font-size:21px}footer{padding:20px 0;min-height:75px;flex-direction:column;gap:11px;text-align:center;font-size:9px}.footer-date{font-size:8px}.letter h1{font-size:44px;letter-spacing:-2px;max-width:340px;margin:0 auto 27px}.letter-paper{text-align:left;max-width:460px;margin:auto;padding:26px}.letter-actions{justify-content:center;gap:15px}.opened .art{margin-top:25px}.dialog-inner{padding:23px}.dialog-header h2{font-size:27px}.field-row{gap:12px}.dialog-actions .primary{flex-basis:100%}.dialog-actions .secondary{flex:1}.note-toast{bottom:17px}.message{font-size:16px}}
+    @media(max-width:360px){.page{padding:0 19px}h1{font-size:49px}.field-row{grid-template-columns:1fr;gap:0}.field-row .field{margin:10px 0}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.petal{display:none}}
+  </style>
+</head>
+<body>
+  <noscript><div class="noscript">Activa JavaScript para abrir tu carta y descubrir los mensajes de las flores.</div></noscript>
+  <div class="page">
+    <header>
+      <div class="brand"><svg class="brand-flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="#e4bd43"><ellipse cx="20" cy="11" rx="5" ry="10"/><ellipse cx="20" cy="29" rx="5" ry="10"/><ellipse cx="11" cy="20" rx="10" ry="5"/><ellipse cx="29" cy="20" rx="10" ry="5"/><ellipse cx="20" cy="11" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="20" cy="29" rx="5" ry="10" transform="rotate(45 20 20)"/><ellipse cx="11" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/><ellipse cx="29" cy="20" rx="10" ry="5" transform="rotate(45 20 20)"/></g><circle cx="20" cy="20" r="5" fill="#7c7140"/></svg>florecer.</div>
+      <div class="top-right"><span class="tiny top-note">Los detalles bonitos se quedan.</span><button class="edit-button" id="editButton" aria-haspopup="dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m15 4 5 5M4 20l5-1L20 8a2.8 2.8 0 0 0-4-4L5 15Z"/></svg>Personalizar</button></div>
+    </header>
+    <main>
+      <section class="copy" aria-label="Tu regalo">
+        <div id="invitation">
+          <p class="eyebrow">Flores amarillas · un regalo para ti</p>
+          <p class="recipient" id="recipient">Para alguien que hace los días más bonitos</p>
+          <h1>Hay personas<br>que son <em>un<br>poquito de sol.</em></h1>
+          <p class="intro">Y tú eres una de ellas.<br>Hoy, estas flores tienen tu nombre y algo bonito que contarte.</p>
+          <button class="primary" id="openGift">Abre tu regalo <span class="arrow" aria-hidden="true">↗</span></button>
+          <p class="under-button"><span class="intro-flower" aria-hidden="true">✧</span> Guarda un instante. Este es para ti.</p>
+        </div>
+        <div id="letter" class="letter" hidden>
+          <p class="eyebrow">Hay cosas que mereces saber</p>
+          <h1>Qué bonito que<br><em>existas.</em></h1>
+          <div class="letter-paper">
+            <h2 class="dear" id="dear" tabindex="-1">Para ti,</h2>
+            <p class="message" id="message"></p>
+            <p class="signature" id="signature"></p>
+          </div>
+          <div class="letter-actions"><button class="text-button" id="morePetals">Un poquito más de magia ✧</button><span class="collected" id="collected">0 de 7 pequeños mensajes descubiertos</span></div>
+        </div>
+      </section>
+      <section class="art" aria-label="Un ramo de flores amarillas para ti">
+        <div class="halo"></div><div class="orbit"></div>
+        <span class="art-caption">Recogidas con cariño</span>
+        <span class="spark one" aria-hidden="true">✧</span><span class="spark two" aria-hidden="true">✧</span><span class="spark three" aria-hidden="true">✦</span>
+        <svg class="bouquet" id="bouquet" viewBox="0 0 560 615" role="group" aria-label="Ramo interactivo: siete flores, siete mensajes"></svg>
+        <div class="art-bottom"><p class="handwritten" id="artCaption">Un ramo que no se marchita.</p><p class="little-heart" aria-hidden="true">♡</p><p class="flower-hint" id="flowerHint" hidden>Toca las flores. Cada una guarda algo para ti.</p></div>
+      </section>
+    </main>
+    <footer><span>Para recordarte lo bonito que es tenerte en el mundo.</span><span class="footer-right"><i class="footer-dot"></i><span class="footer-date">Pequeños detalles · grandes sonrisas</span></span></footer>
+  </div>
+  <div class="petal-layer" id="petals" aria-hidden="true"></div>
+  <aside class="note-toast" id="noteToast" hidden aria-label="Mensaje de una flor"><small>Una flor, un recordatorio</small><p id="flowerNote" role="status"></p><button class="close-note" id="closeNote" aria-label="Cerrar mensaje">×</button></aside>
+  <dialog id="customDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-inner">
+      <div class="dialog-header"><h2 id="dialogTitle">Hazlo suyo.</h2><button class="close-dialog" id="closeDialog" aria-label="Cerrar personalización" type="button">×</button></div>
+      <p class="dialog-description">Ponle su nombre, escribe lo que sientes y regálale un pequeño momento bonito.</p>
+      <form id="customForm">
+        <div class="field-row"><label class="field"><span>¿Para quién es?</span><input id="nameInput" name="nombre" placeholder="Ej. Valentina" maxlength="50" autocomplete="off"></label><label class="field"><span>Tu firma</span><input id="fromInput" name="firma" placeholder="Ej. Con cariño, Daniel" maxlength="80" autocomplete="off"></label></div>
+        <label class="field"><span>Tu dedicatoria</span><textarea id="messageInput" name="mensaje" maxlength="1600" placeholder="Hay algo que quiero que sepas…"></textarea></label>
+        <div class="dialog-actions"><button class="primary" type="submit">Ver mi regalo <span aria-hidden="true">↗</span></button><button class="secondary" type="button" id="downloadButton">Descargar HTML</button><button class="secondary" type="button" id="shareButton">Copiar enlace</button></div>
+        <p class="share-explanation" id="shareExplanation">Descarga el HTML y envíaselo: el regalo funciona sin internet. Si lo publicas en GitHub Pages, también puedes compartir un enlace personalizado.</p>
+        <p class="form-status" id="formStatus" role="status"></p>
+        <input class="url-field" id="shareFallback" readonly aria-label="Enlace personalizado para copiar" hidden>
+      </form>
+    </div>
+  </dialog>
+  <script id="giftConfig" type="application/json">{"name":"","from":"Con mucho cariño, para ti ♡","message":"Te regalo estas flores amarillas para recordarte algo sencillo: el mundo es un lugar más bonito contigo en él.\n\nOjalá la vida te devuelva, en momentos felices, toda la luz que compartes. Que te sobren las sonrisas, los abrazos sinceros y las razones para ilusionarte.\n\nHoy, este pequeño jardín es solo tuyo."}</script>
+  <script>
+    (() => {
+      'use strict';
+      const $ = id => document.getElementById(id);
+      const defaults = JSON.parse($('giftConfig').textContent);
+      const params = new URLSearchParams(location.hash.slice(1));
+      let config = { name:(params.get('nombre') ?? defaults.name).slice(0,50), from:(params.get('de') ?? defaults.from).slice(0,80), message:(params.get('mensaje') ?? defaults.message).slice(0,1600) };
+      let opened = false;
+      const discovered = new Set();
+      const notes = ['Tu forma de ser hace más bonitos los días.','Ojalá hoy te pase algo que te haga sonreír sin darte cuenta.','También mereces todo el cariño que das.','Que nunca te falten sueños nuevos ni ganas de cumplirlos.','Hay una luz en ti que nadie más tiene.','Florece a tu ritmo. Lo bonito también toma tiempo.','Estas flores son un abrazo que puedes volver a abrir.'];
+      const flowerPositions = [{x:182,y:203,s:1,r:-16},{x:299,y:133,s:.95,r:8},{x:392,y:217,s:1.06,r:18},{x:254,y:256,s:1.1,r:-7},{x:343,y:303,s:.94,r:15},{x:143,y:303,s:.77,r:-27},{x:375,y:127,s:.58,r:23}];
+      function leaf(x,y,scale,rotation,color='#7f9460') { return `<g transform="translate(${x} ${y}) rotate(${rotation}) scale(${scale})"><path d="M0 0 Q-39-16-31-66 Q8-53 0 0" fill="${color}"/><path d="M0 0 Q-17-25-26-56" fill="none" stroke="#455f3e" stroke-width="1" opacity=".4"/></g>`; }
+      function branch(x,y,rotation,scale=1) {
+        let html=`<g transform="translate(${x} ${y}) rotate(${rotation}) scale(${scale})"><path d="M0 0 Q-8-94 3-174" stroke="#71815a" stroke-width="2" fill="none"/>`;
+        for(let i=0;i<5;i++) { let yy=-29-i*28; html+=`<ellipse cx="${i%2?-13:12}" cy="${yy}" rx="12" ry="19" transform="rotate(${i%2?-37:38} ${i%2?-13:12} ${yy})" fill="${i%2?'#9caa80':'#a8b58b'}" stroke="#647b53" stroke-width=".5"/>`; }
+        return html+'</g>';
+      }
+      function flower(p,i) {
+        let petals='';
+        for(let layer=0;layer<2;layer++) for(let j=0;j<13;j++) { const rotation=j*360/13+layer*13.8; petals+=`<path d="M-6-9 C-21-27-16-54-3-54 C11-56 17-28 6-9Z" transform="rotate(${rotation}) scale(${layer?.85:1})" fill="url(#${layer?'petalFront':'petalBack'})" stroke="#c49b2a" stroke-width=".45"/>`; }
+        let seeds=''; for(let j=0;j<45;j++){let a=j*2.39996,r=2.05*Math.sqrt(j);seeds+=`<circle cx="${Math.cos(a)*r}" cy="${Math.sin(a)*r}" r="1.15" fill="${j%3?'#b39843':'#e0bd60'}" opacity=".8"/>`;}
+        return `<g class="flower" role="button" tabindex="0" aria-label="Flor ${i+1}: descubrir un mensaje" data-flower="${i}" transform="translate(${p.x} ${p.y}) rotate(${p.r}) scale(${p.s})"><title>Una flor, un mensaje para ti</title><circle class="focus-ring" r="63"/><g class="bloom">${petals}<circle r="17" fill="url(#center)" stroke="#bea147" stroke-width="2"/>${seeds}</g></g>`;
+      }
+      function drawBouquet() {
+        let html=`<defs><linearGradient id="petalBack" x1="0" y1="1" x2=".7" y2="0" gradientUnits="objectBoundingBox"><stop stop-color="#d5a21c"/><stop offset=".55" stop-color="#edc22e"/><stop offset="1" stop-color="#f9d854"/></linearGradient><linearGradient id="petalFront" x1="0" y1="1" x2=".6" y2="0"><stop stop-color="#e6b02c"/><stop offset=".7" stop-color="#f9d954"/><stop offset="1" stop-color="#ffe78a"/></linearGradient><radialGradient id="center"><stop stop-color="#59603a"/><stop offset=".8" stop-color="#7d703b"/><stop offset="1" stop-color="#b08b3b"/></radialGradient><linearGradient id="paperLeft" x1="0" x2="1" y1=".4" y2=".6"><stop stop-color="#e1d3ac"/><stop offset=".48" stop-color="#eee3c5"/><stop offset="1" stop-color="#cdbc91"/></linearGradient><linearGradient id="paperRight" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f3eacf"/><stop offset="1" stop-color="#d9c89e"/></linearGradient><linearGradient id="ribbon" x1="0" x2="1"><stop stop-color="#a79352"/><stop offset=".5" stop-color="#cbb56f"/><stop offset="1" stop-color="#aa9351"/></linearGradient></defs><g class="bouquet-group"><path d="M124 306 287 578 422 325 289 355Z" fill="#f4ecda" stroke="#dfd3b9" stroke-width="1"/>`;
+        html+=branch(207,403,-30,1.2)+branch(332,401,35,1.1)+branch(265,328,-9,1.22)+branch(344,330,20,.8);
+        flowerPositions.forEach((p,i)=>{html+=`<path d="M${p.x} ${p.y} Q${p.x-30+i*8} 370 ${272+i*3} 538" fill="none" stroke="${i%2?'#6c8047':'#829152'}" stroke-width="${i%2?4:3}"/>`;});
+        html+=leaf(226,395,1.3,-36)+leaf(319,395,1.1,73,'#6e854f')+leaf(228,339,.95,-52,'#617c48')+leaf(360,317,.95,83)+leaf(164,293,.8,-48,'#839659')+leaf(281,235,.78,52,'#8a9c62')+leaf(323,200,.72,57)+leaf(209,243,.6,-20)+leaf(376,225,.7,67);
+        html+=`<g fill="#e9cf6c" stroke="#a2a376" stroke-width="1"><path d="M147 342Q111 253 110 203M111 259 88 237M118 283 91 277M117 276 134 246" fill="none"/><ellipse cx="110" cy="201" rx="5" ry="9" transform="rotate(-12 110 201)"/><ellipse cx="87" cy="234" rx="5" ry="8" transform="rotate(-30 87 234)"/><ellipse cx="90" cy="276" rx="5" ry="8" transform="rotate(-50 90 276)"/><ellipse cx="135" cy="243" rx="5" ry="8" transform="rotate(20 135 243)"/></g>`;
+        flowerPositions.forEach((p,i)=>{ html+=flower(p,i); });
+        html+=`<path d="M124 328 Q196 347 331 431 L285 573 Q223 508 124 328Z" fill="url(#paperLeft)" stroke="#cbbc97" stroke-width="1"/><path d="M124 328 201 413 285 573 222 425Z" fill="#f6edda" opacity=".55"/><path d="M424 323 Q376 415 285 573 L237 435 Q339 394 424 323Z" fill="url(#paperRight)" stroke="#c6b995" stroke-width="1"/><path d="M424 323 Q342 409 285 573 L323 426Z" fill="#f9f0d8" opacity=".6"/><path d="m159 350 67 86M396 356l-62 87M296 484l-12 67" stroke="#b5a276" stroke-width=".7" opacity=".4"/><path d="M232 452 Q278 469 333 452 L328 463 Q281 482 237 463Z" fill="url(#ribbon)"/><path d="M282 469 C237 430 202 451 225 471 Q249 487 281 472 C316 430 348 445 331 467 Q309 485 282 472" fill="#cbb774" stroke="#a79558" stroke-width="1"/><path d="M280 474 Q261 493 246 519 L260 517 267 530 Q271 492 289 474M286 475 Q305 500 332 509 L319 494 325 486 Q304 484 293 469" fill="url(#ribbon)" stroke="#aa975b" stroke-width=".7"/><ellipse cx="284" cy="470" rx="10" ry="7" transform="rotate(-10 284 470)" fill="#b39d5b"/><path d="M266 501 316 508 310 546 260 538Z" fill="#fffaf0" stroke="#d8ceac" stroke-width=".8"/><circle cx="271" cy="506" r="2" fill="#c8bb92"/><path d="M280 478q-18 11-9 28" fill="none" stroke="#aa935a" stroke-width="1"/><text x="287" y="529" font-family="Georgia,serif" font-size="10" text-anchor="middle" fill="#919369" transform="rotate(8 287 529)">para ti ♡</text></g>`;
+        $('bouquet').innerHTML=html;
+        document.querySelectorAll('[data-flower]').forEach(el=>{
+          const reveal=()=>{openGift(false);showNote(Number(el.dataset.flower));};
+          el.addEventListener('click',reveal);
+          el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reveal();}});
+        });
+      }
+      function applyConfig() {
+        $('recipient').textContent=config.name ? `Para ${config.name}, que hace los días más bonitos` : 'Para alguien que hace los días más bonitos';
+        $('dear').textContent=config.name ? `Para ti, ${config.name}:` : 'Para ti,';
+        $('message').textContent=config.message || defaults.message;
+        $('signature').textContent=config.from || defaults.from;
+        document.title=config.name ? `Flores para ${config.name} · florecer` : 'Unas flores para ti · florecer';
+      }
+      function resetGift() {
+        opened=false;discovered.clear();document.body.classList.remove('opened');$('invitation').hidden=false;$('letter').hidden=true;$('flowerHint').hidden=true;$('noteToast').hidden=true;$('artCaption').textContent='Un ramo que no se marchita.';$('collected').textContent='0 de 7 pequeños mensajes descubiertos';$('petals').replaceChildren();
+      }
+      function rainPetals() {
+        if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+        $('petals').replaceChildren();
+        for(let i=0;i<32;i++) {const p=document.createElement('i');p.className='petal';p.style.cssText=`--x:${Math.random()*100}%;--s:${6+Math.random()*8}px;--c:${['#edc84c','#f7dc78','#dec165'][i%3]};--t:${4+Math.random()*3}s;--d:${Math.random()*1.4}s;--drift:${Math.random()*180-90}px`;p.addEventListener('animationend',()=>p.remove(),{once:true});$('petals').append(p);}
+      }
+      function openGift(focus=true) {
+        if(opened)return;
+        opened=true;$('invitation').hidden=true;$('letter').hidden=false;$('flowerHint').hidden=false;document.body.classList.add('opened');$('artCaption').textContent='Siete flores. Siete cosas bonitas.';rainPetals();if(focus)$('dear').focus({preventScroll:true});
+      }
+      function showNote(i) {
+        discovered.add(i);$('flowerNote').textContent=notes[i];$('noteToast').hidden=false;$('collected').textContent=`${discovered.size} de 7 pequeños mensajes descubiertos`;
+        if(discovered.size===7)$('collected').textContent='Los encontraste todos. Son tuyos ♡';
+      }
+      function readForm() {config={name:$('nameInput').value.trim(),from:$('fromInput').value.trim()||defaults.from,message:$('messageInput').value.trim()||defaults.message};applyConfig();}
+      function clearStatus() {$('formStatus').textContent='';$('shareFallback').hidden=true;}
+      $('openGift').addEventListener('click',()=>openGift());
+      $('morePetals').addEventListener('click',()=>{rainPetals();const unseen=notes.map((_,i)=>i).filter(i=>!discovered.has(i));showNote(unseen.length?unseen[0]:Math.floor(Math.random()*notes.length));});
+      $('closeNote').addEventListener('click',()=>{$('noteToast').hidden=true;});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')$('noteToast').hidden=true;});
+      $('editButton').addEventListener('click',()=>{$('nameInput').value=config.name;$('fromInput').value=config.from;$('messageInput').value=config.message;clearStatus();$('customDialog').showModal();});
+      $('closeDialog').addEventListener('click',()=>$('customDialog').close());
+      $('customForm').addEventListener('input',clearStatus);
+      $('customForm').addEventListener('submit',e=>{e.preventDefault();readForm();resetGift();$('customDialog').close();$('openGift').focus({preventScroll:true});});
+      window.addEventListener('hashchange',()=>{
+        const next=new URLSearchParams(location.hash.slice(1));
+        config={name:(next.get('nombre')??defaults.name).slice(0,50),from:(next.get('de')??defaults.from).slice(0,80),message:(next.get('mensaje')??defaults.message).slice(0,1600)};
+        $('customDialog').close();resetGift();applyConfig();
+      });
+      $('downloadButton').addEventListener('click',()=>{
+        readForm();
+        const clone=document.documentElement.cloneNode(true);
+        clone.querySelector('#giftConfig').textContent=JSON.stringify(config).replace(/</g,'\\u003c');
+        clone.querySelector('#customDialog').removeAttribute('open');
+        clone.querySelector('body').classList.remove('opened');
+        clone.querySelector('#invitation').hidden=false;
+        clone.querySelector('#letter').hidden=true;
+        clone.querySelector('#noteToast').hidden=true;
+        clone.querySelector('#petals').replaceChildren();
+        clone.querySelector('#bouquet').replaceChildren();
+        clone.querySelector('#shareFallback').value='';
+        const blob=new Blob(['<!DOCTYPE html>\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
+        const url=URL.createObjectURL(blob), a=document.createElement('a');a.href=url;a.download=`flores-para-${(config.name||'ti').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,'').toLowerCase()||'ti'}.html`;a.hidden=true;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);$('formStatus').textContent='Regalo preparado. Si no comienza la descarga, abre esta página en Chrome, Edge o Safari e inténtalo de nuevo.';
+      });
+      $('shareButton').addEventListener('click',async()=>{
+        readForm();clearStatus();
+        if(!/^https?:$/.test(location.protocol)||['localhost','127.0.0.1','::1','[::1]'].includes(location.hostname)){$('formStatus').textContent='Para compartir desde aquí, descarga el HTML. El enlace estará disponible cuando publiques la página en GitHub Pages o en tu sitio web.';return;}
+        const url=new URL(location.href);url.search='';url.hash=new URLSearchParams({nombre:config.name,de:config.from,mensaje:config.message}).toString();
+        try{await navigator.clipboard.writeText(url.href);$('formStatus').textContent='Enlace copiado. Incluye tu nombre y dedicatoria; cualquier persona que lo reciba podrá leerlos.';}catch{$('shareFallback').hidden=false;$('shareFallback').value=url.href;$('shareFallback').focus();$('shareFallback').select();$('formStatus').textContent='Copia este enlace para enviar tu regalo personalizado.';}
+      });
+      $('customDialog').removeAttribute('open');clearStatus();resetGift();drawBouquet();applyConfig();
+    })();
+  </script>
+</body>
+</html>

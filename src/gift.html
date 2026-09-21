@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f4e9">
+<meta name="description" content="Un ramo de flores amarillas que guarda palabras para ti.">
+<title>Un jardín solo para ti · florecer.</title>
+<style>__STYLE__</style>
+</head>
+<body>
+<noscript><p class="no-js">Este regalo necesita JavaScript para abrir su carta y sus flores. Ábrelo en tu navegador.</p></noscript>
+<header class="brand-bar"><span class="brand"><span aria-hidden="true">✳</span> florecer.</span><span class="brand-note">HECHO PARA HACERTE SONREÍR</span></header>
+<main>
+  <section id="welcome" class="welcome" aria-labelledby="welcomeTitle">
+    <div class="intro-copy"><p class="eyebrow">UN PEQUEÑO SECRETO, SOLO PARA TI</p><h1 id="welcomeTitle">Hay algo bonito<br><em>esperándote.</em></h1><p id="welcomeName" class="welcome-name">Y lleva tu nombre.</p></div>
+    <div class="envelope-scene" id="envelopeScene">
+      <div class="envelope-shadow"></div>
+      <button class="envelope" id="openEnvelope" aria-label="Romper el sello y abrir la carta">
+        <span class="envelope-back"></span>
+        <span class="envelope-letter"><span class="letter-sprig" aria-hidden="true">✳</span><span class="letter-teaser">Hay personas que hacen<br>florecer lo que tocan.</span><span class="letter-teaser-sign">Tú eres una de ellas.</span></span>
+        <span class="envelope-front"></span><span class="envelope-fold-left"></span><span class="envelope-fold-right"></span>
+        <span class="envelope-flap"></span><span class="wax-seal"><span aria-hidden="true">✿</span></span>
+        <span class="envelope-to" id="envelopeTo">Para ti, con cariño</span>
+        <svg class="envelope-sprig" viewBox="0 0 100 140" aria-hidden="true"><g fill="none" stroke="#7a8851" stroke-width="1.4"><path d="M49 128Q47 73 60 17M52 92Q22 82 21 61Q47 64 52 92M52 77Q83 67 83 45Q59 51 52 77M55 56Q30 43 37 23Q55 32 55 56"/><path d="M60 27Q40 10 56 3Q71 9 60 27M62 25Q83 11 79 30Q71 39 62 25"/></g></svg>
+      </button>
+    </div>
+    <div class="envelope-instruction" id="envelopeInstruction"><span class="tiny-star">✧</span> Toca el sello. Este momento es tuyo.</div>
+    <button class="primary reveal-button" id="revealGarden" hidden>Descubrir mi ramo <span aria-hidden="true">↗</span></button>
+    <p class="welcome-foot">Algunos detalles no necesitan una razón.<br>Solo alguien especial.</p>
+  </section>
+  <section id="garden" class="garden" hidden aria-labelledby="gardenTitle">
+    <div class="garden-heading"><div><p class="eyebrow" id="gardenFor">UN JARDÍN SOLO PARA TI</p><h1 id="gardenTitle">Un poquito de sol.<br><em>Mucho cariño.</em></h1></div><p class="garden-subtitle">Ocho flores. Ocho cosas bonitas.<br>Y todas tienen algo que decirte.</p></div>
+    <div class="garden-layout">
+      <section class="bouquet-panel" aria-label="Tu ramo interactivo">
+        <div class="scene-aura"></div><span class="scene-spark spark-a" aria-hidden="true">✧</span><span class="scene-spark spark-b" aria-hidden="true">✧</span>
+        <div id="scene" class="scene"><canvas id="bouquetCanvas" tabindex="0" aria-label="Ramo en tres dimensiones. Arrastra para girar. Toca una flor para abrirla. Usa las flechas del teclado para girar y Enter para descubrir una flor."></canvas><div id="sceneFallback" class="scene-fallback" hidden><span aria-hidden="true">🌻 🌷 🌼</span><p>Tu ramo guarda ocho mensajes.<br>Abre cada flor con los botones de abajo.</p></div></div>
+        <div class="scene-controls"><button id="rotateLeft" aria-label="Girar ramo a la izquierda">↶</button><span id="sceneHint">Arrastra para girar · toca una flor</span><button id="rotateRight" aria-label="Girar ramo a la derecha">↷</button><button id="resetView" aria-label="Volver a la vista inicial">⟲</button></div>
+        <div class="flower-picker" id="flowerPicker" aria-label="Abrir las flores del ramo"></div>
+        <p class="picker-caption" id="progressText" aria-live="polite">Cada flor es una pequeña sorpresa.</p>
+      </section>
+      <aside class="message-column">
+        <article class="message-card" id="messageCard"><div class="card-corner" aria-hidden="true">✧</div><p class="card-category" id="cardCategory">ANTES DE QUE ABRAS LAS FLORES…</p><h2 id="cardTitle" tabindex="-1">Qué bonito que existas.</h2><p class="card-message" id="cardMessage"></p><p class="card-signature" id="cardSignature"></p><div class="card-bottom"><span class="mini-flower" id="cardIcon" aria-hidden="true">✿</span><span id="cardFoot">Un ramo que no se marchita.</span></div></article>
+        <button class="letter-link" id="readLetter">↗ Volver a mi dedicatoria</button>
+        <div id="completion" class="completion" hidden><span aria-hidden="true">♡</span><p>Las encontraste todas.<br><strong>Ahora lleva contigo todo este cariño.</strong></p></div>
+      </aside>
+    </div>
+    <footer class="garden-footer"><span>Las flores se quedan aquí. El cariño va contigo.</span><button id="replayGift">Volver a abrir mi regalo ↗</button></footer>
+  </section>
+</main>
+<div id="petals" class="petal-layer" aria-hidden="true"></div>
+<script type="application/json" id="giftConfig">__GIFT_DATA__</script>
+<script id="three-engine">__THREE__</script>
+<script id="gift-runtime">__RUNTIME__</script>
+__EDITOR__
+</body>
+</html>
